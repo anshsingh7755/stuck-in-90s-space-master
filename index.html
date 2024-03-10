@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <title>Space Game</title>
+</head>
+<body>
+    <div class="container">
+        <div class="game-details flex">
+            <div class="timer flex">
+                <p id="timer-countdown">00:00</p>
+            </div>
+            <div class="player-title flex">
+                <p id="greetingPlayer">Greetings ----</p>
+            </div>
+            <div class="levels flex">
+                <button class="flex">15s</button>
+                <button class="flex">30s</button>
+                <button class="flex">45s</button>
+                <button class="flex">60s</button>
+            </div>
+        </div>
+        <div class="game-space">
+            <video src="videos/space.mp4" class="bg-space-video" muted autoplay loop></video>
+            <canvas></canvas>
+        </div>
+    </div>
+    <div class="popup-cover flex">
+        <div class="popup flex" id="welcome-popup">
+            <h1>Welcome To Space</h1>
+            <p>select the time on top right corner to start</p>
+            <button id="playBtn">Play</button>
+        </div>
+        <div class="popup popup-hidden flex" id="name-popup">
+            <h1>Enter Your Name</h1>
+            <input type="text" name="player-name" id="player-name-input">
+            <button id="addNameBtn">Confirm</button>
+        </div>
+    </div>
+    <button id="play-mute" class="flex">
+        <i class="bi bi-volume-up-fill"></i>
+    </button>
+
+    <div class="animated-game-name-cover flex">
+        <h1>STUCK IN <br/> 90s SPACE</h1>
+        <p>select the time on top right corner to start</p>
+    </div>
+
+    <div class="start-countdown">
+        <p>3</p>
+    </div>
+
+    <div class="game-end-popup">
+        <div class="game-loss flex">
+            <p>Game Over</p>
+            <p>You Lose</p>
+            <button class="gameRestartBtn">Restart</button>
+        </div>
+        <div class="game-win flex">
+            <p>Congratulations</p>
+            <p>You Won</p>
+            <button class="goToStartBtn">Go To Start</button>
+        </div>
+    </div>
+
+    <img src="imgs/planetImg.png" alt="Planet-Stuck-In-Space" id="planetImage"/>
+
+    <script src="app.js"></script>
+</body>
+</html>
